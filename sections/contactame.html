@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Shira Design: Contáctame</title>
+		<link rel="shortcut icon" href="..\img\favicon-shira-design-03.jpg"/>
+		<link rel="stylesheet" href="..\css\style.css">
+		<!-- <link rel="stylesheet" href="..\css\form.css"> -->
+	</head>
+	<body class="body__form">
+		<header>
+			<nav>
+				<a href="..\index.html"><img src="..\img\go-horizontal-shira-design-blanco-03.svg" alt="logo-horizontal-blanco-shira-design"/></a>
+				<img class="img__menu" src="..\img\menu-hamburgesa.svg" alt="menu-hamburgesa"/>
+				<ul class="ul__list">
+					<li><a href="..\index.html">Inicio</a></li>
+					<li><a href="acerca-de-mi.html">Acerca de mi</a></li>
+					<li><a href="servicios.html">Servicios</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a class="selected" href="contactame.html">Contáctame</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="container" class="main__section--form">
+			<section class="section__form">
+				<div class="div_form">
+					<form class="form__container">
+						<fieldset>
+							<legend class="legend__tittle">¿Quiéres trabajar conmigo?</legend>
+							<label for="nombre">Nombre:</label>
+							<input type="text" placeholder="Nombre" name="nombre" id="nombre"/>
+							<label for="apellido">Apellidos:</label>
+							<input type="text" placeholder="Apellidos" name="apellido" id="apellido"/>
+							<label for="correo">Email:</label>
+							<input type="text" placeholder="Email" name="correo" id="correo"/>
+							<label for="servicios">Servicios:</label>
+							<div class="custom-select">
+								<select name="servicios" id="servicios">
+									<option value="logo">Diseño de Logo</option>
+									<option value="redes-sociales">Redes Sociales</option>
+									<option value="diseño-web">Diseño Web</option>
+								</select>
+							</div>
+							<h3>Dime un poco sobre tu proyecto:</h3>
+							<textarea name="mensaje" rows="10" cols="29" placeholder="Mensaje..."></textarea>
+							<input type="reset" value="Limpiar"/>
+							<input type="submit" value="Enviar" onclick="alert('¡Información enviada!')"/>
+						</fieldset>
+					</form>
+				</div>
+				<div class="div__map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18869.151799936255!2d-75.61913601679433!3d6.164155204239461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1654973909025!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</section>
+		</main>
+		<footer id="pie" class="container__pie">
+			<!-- Redes Sociales -->
+			<div class="div__rrss">
+			<p class="p__rrss">Sígueme en:</p>
+				<ul class="ul__rrss">
+					<li><a href="https://www.linkedin.com/in/catherin-camargo/" target="_blank"><img src="..\img\logo-linkedin-small.png" title="LinkedIn" alt="logo-linkedin"/></a></li>
+					<li><a href="https://www.instagram.com/shiradesign.15/" target="_blank"><img src="..\img\logo-instagram-small.png" title="Instagram" alt="logo-instagram"/></a></li>
+				</ul>
+			</div>
+				<!-- Copyrights -->
+				<div class="div__copyright">
+					<p>© 2022 Shira Design All rights reserved.</p>
+				</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,963 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ===RESET=== */
+* {
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1.5rem;
+}
+
+/* =========================================================INDEX========================================================= */
+/*========================GRID========================*/
+
+header{
+    grid-area: nav;
+}
+.main__container--index{
+    grid-area: container;
+}
+
+footer{
+    grid-area: pie;
+}
+div.body__index{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr .05fr;
+    grid-template-areas:
+    "nav"
+    "container"
+    "pie";
+}
+
+div.div__content{
+    grid-area: content;
+}
+#img__intro.div__img--intro{
+    grid-area: image;
+}
+.section__wrap{
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "content image";
+
+}
+
+.img__menu{
+    display: none;
+}
+
+/*========================GRID========================*/
+
+/*========================= INICIA HEADER========================= */
+nav{
+    background-color:rgb(197, 0, 0) ;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+}
+
+nav a.selected{
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.8rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+    gap: 2.4rem;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: rgb(197, 0, 0);
+    }
+
+nav a {
+    padding-top: 1.1rem;
+}
+
+li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* =========================FINALIZA HEADER========================= */
+
+/* =========================INICIA BODY========================= */
+/* .section__wrap{
+    padding-top: 5.2rem;
+    height: fit-content;
+    margin: auto;
+} */
+/* .section__wrap div{
+    display: inline-block;
+    margin: auto;
+} */
+.div__img--intro{
+    width: 20%;
+    height: 20%;
+    padding-top: 5%;
+}
+.div__content{
+    /* float: left; */
+    /* height: 42rem; */
+    padding: 25% 10% 0 10%;
+}
+p.p__intro{
+    font-size: 2.5rem;
+    padding-top: .8rem;
+}
+/* ===Inicia Botón=== */
+.div__button{
+    font-family: 'montserrat', sans-serif ;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 0, 0);
+    margin-top: 3.2rem ;
+    padding: .8rem 1.3rem .8rem 1.3rem;
+    border: none;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.div__button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* ===Finaliza Botón=== */
+
+/* =========================FINALIZA BODY========================= */
+
+/* =========================INICIA FOOTER========================= */
+#pie{
+    display: grid;
+    background-color: rgb(58, 57, 57);
+}
+.div__rrss{
+    grid-area: rrss;
+}
+.container__pie{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .05fr;
+    grid-template-areas: 
+    "rrss copy";
+}
+/* Texto sigueme */
+p.p__rrss{
+    float: left;
+    color: white;
+    padding: 3.2rem .8rem .8rem 3.2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+/* Texto sigueme */
+
+.ul__rrss li{
+    float: left;
+    padding: 1.6rem 0 .8rem 0;
+}
+.div__copyright p{
+    grid-area: copy;
+    text-align: right;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 3.2rem 3.2rem .8rem 0;
+}
+/* =========================FINALIZA FOOTER========================= */
+
+/* =========================RESPONSIVE INDEX========================= */
+@media (max-width: 320px){
+    .section__wrap{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "image"
+    "content";
+    }
+
+    .img__menu{
+    display: inline-block !important;
+    padding-left: 1.6rem;
+    }
+
+    .ul__list{
+    display: none;
+    }
+    .div__copyright p{
+    flex-wrap: nowrap;
+    }
+    .container__pie{
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, .05fr);
+    grid-template-areas: 
+    "rrss"
+    "copy";
+    }
+    .div__copyright p{
+    text-align: center;
+    padding: 0 0 5% 0;
+    }
+    .div__rrss{
+    text-align: center;
+    padding-left: 12%;
+    align-content: center;
+    }
+    footer{
+    height: 100%;
+    }
+}
+/* =========================RESPONSIVE========================= */
+
+
+/* =========================================================INDEX========================================================= */
+
+
+/* =========================================================GALLERY - ACERCA DE MI========================================================= */
+
+/*========================GRID========================*/
+.body__acerca{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr .05fr;
+    grid-template-areas:
+    "nav"
+    "container"
+    "pie";
+}
+
+#main .main__template--areas{
+    display: grid;
+    width: 100%;
+    grid-area: container;
+    }
+
+#gallery{
+    grid-area: gallery;
+}
+
+#aside img{
+    grid-area: image;
+}
+
+#text__gallery{
+    grid-area: text;
+}
+.main__template--areas{
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "gallery image"
+    "gallery text";
+}
+/*========================GRID========================*/
+
+/* INICIO DE GALERIA */
+section.section__gallery{
+    width: auto;
+    padding: 4em 3.2em;
+}
+
+div.div__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+  /* COLUMNAS UNA A LADO DE OTRA */
+.div__column {
+    flex: 30%;
+    max-width: auto;
+    padding: 0;
+    height: auto;
+}
+
+.div__column img {
+    vertical-align: middle;
+    width: 100%;
+}
+/* FINAL DE GALERIA */
+
+/* ========================RESSPONSIVE======================== */
+  /* Responsive layout TABLET - 2 COL */
+/* @media screen and (max-width: 800px) {
+.div__column {
+    flex: 50%;
+    max-width: 50%;
+    }
+} */
+/* Responsive layout MOBILE - 1 COL */
+/* @media screen and (max-width: 600px) {
+.div__column {
+    flex: 100%;
+    max-width: 100%;
+    }
+} */
+/* ========================RESSPONSIVE======================== */
+
+/* INICIO DE TEXTO*/
+section .section__text--gallery{
+    display: flex;
+    width: 95%;
+    height: fit-content;
+    margin-bottom: 10%;
+    margin-top: 3.2rem;
+    padding-left: 3.2rem;
+    justify-content: flex-start;
+}
+
+.div__text-gallery{
+    flex-wrap: wrap;
+    padding-top: 2.4rem;
+}
+/* FINAL DE TEXTO*/
+
+/* INICIO ASIDE */
+img.aside__img{
+    /* display: flex; */
+    /* float: center; */
+    padding-top: 10%;
+    width: 100%;
+    height: auto;
+}
+/* FINAL ASIDE */
+
+/* =========================RESPONSIVE ACERCA DE MI========================= */
+@media (max-width: 320px){
+    .main__template--areas{
+    display: grid;
+    padding: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "image"
+    "text"
+    "gallery";
+    }
+    img.aside__img{
+    padding: 0;
+    }
+    .div__text--gallery h1{
+    padding-top: 5%;
+    text-align: center;
+    }
+    .div__text--gallery p{
+    padding-top: 5%;
+    text-align: justify;
+    }
+    section.section__gallery{
+    padding: 0;
+    }
+    /* .div__row {
+    flex-direction: column;
+    width: 100%;
+    } */
+}
+
+
+/* =========================RESPONSIVE ACERCA DE MI========================= */
+
+
+/* =========================================================GALLERY - ACERCA DE MI========================================================= */
+
+/* =========================================================SERVICES - SERVICIOS========================================================= */
+
+/*========================GRID========================*/
+.container__services{
+    grid-area: container;
+}
+.body__services{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr .05fr;
+    grid-template-areas:
+    "nav"
+    "container"
+    "pie";
+}
+.div__tittle--services{
+    grid-area: tittle;
+    display: flex;
+    align-items: center;
+}
+.div__article--services{
+    grid-area: services;
+}
+.section__slides{
+    grid-area: slides;
+}
+.section_services{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .4fr 1fr 1fr;
+    grid-template-areas: 
+    "tittle tittle tittle tittle"
+    "services services services  services"
+    "services services services  services";
+}
+/*========================GRID========================*/
+
+/* SERVICIOS */
+.div__tittle--services h1{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color:rgb(197, 0, 0);
+}
+/* article img{
+    width: 80%;
+}
+article p{
+    width: 80%;
+} */
+#services{
+    display: flex;
+    width: 100%;
+}
+#services article{
+    width: 20.6rem;
+}
+figcaption{
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-top: .8rem;
+    color: rgb(197, 0, 0) ;
+}
+article img{
+    width: 20.6rem;
+}
+article p{
+    text-align: left;
+    font-size: 1.4rem;
+    padding-top: .8rem;
+}
+.div__article--services{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 3.2rem;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.div__button--services{
+    font-family: 'montserrat', sans-serif ;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 0, 0);
+    margin-top: 1.6rem ;
+    padding: .8rem 1rem .8rem 1rem;
+    border: none;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.div__button--services:hover{
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* =========================================================SERVICES - SERVICIOS========================================================= */
+
+
+/* ========================================================= SLIDES - SERVICIOS========================================================= */
+
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+html, body { height: 100%; }
+
+/*RESPONSIVE CSS3 SLIDESHOW GALLERY*/
+
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;  /* EJE HORIZONTAL */
+	justify-items: center;  /* EJE VERTICAL */
+	align-content: flex-end ;  /* EJE VERTICAL */
+	justify-content: center; /* EJE HORIZONTAL */
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+	visibility: hidden; 
+}
+
+.CSSgal .prevNext a {
+	background: #fff;
+	position: absolute;
+	width:       5rem;
+	height:      5rem;
+	line-height: 5rem; 
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	left: 0;
+}
+.CSSgal .prevNext a:hover {
+	opacity: 1;
+}
+.CSSgal .prevNext a+a {
+	left: auto;
+	right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 1rem 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       2rem;
+	height:      2rem;
+	line-height: 3rem;
+	background: rgb(197, 0, 0) ;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+	background: rgb(197, 0, 0, 0.5); 
+}
+.CSSgal .bullets > a:hover {
+	background: rgb(197, 0, 0, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgb(197, 0, 0, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >div:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+
+
+
+.CSSgal{
+	color: #fff;	
+	text-align: left;
+}
+.CSSgal img{
+    width: 100%;
+}
+
+.CSSgal .slider h2 {
+    padding-top: 15%;
+    padding-left: 5%;
+	letter-spacing: -0.06rem;
+    z-index: 100;
+    position: absolute;
+}
+
+.CSSgal .slider h3{
+    padding-top: 9%;
+    padding-left: 5%;
+	letter-spacing: -0.06rem;
+    z-index: 110;
+    position: absolute;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
+
+/*** grid-specific styles ***/
+/* =========================RESPONSIVE - SERVICES ========================= */
+@media (max-width: 320px){
+    .section_services{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr;
+    grid-template-areas:
+    "tittle"
+    "services";
+    }
+    section.section__slides{
+        display: none;
+    }
+    .div__tittle--services h1{
+        font-size: 3.5rem;
+        /* padding: 0; */
+    }
+    .background h2{
+        display: none;
+        /* font-size: 1.5rem;
+        padding-left: 10%; */
+    }
+    .background h3{
+        display: none;
+    }
+    .CSSgal .bullets > a {
+        display: none;
+        /* width: 1.2rem;
+        height: 1.2rem; */
+    }
+    .CSSgal .prevNext a {
+        width: 2.8rem;
+        height: 2.8rem;
+        line-height: 3rem;
+    }
+    .div__article--services{
+    flex-direction: column;
+    }
+    article{
+    padding-bottom: 10%;
+    text-align: center;
+    }
+    .p__services{
+        text-align: center;
+    }
+    
+}
+
+
+/* ========================================================= SLIDES - SERVICIOS========================================================= */
+
+
+/* ========================================================= BLOG========================================================= */
+
+/*========================GRID========================*/
+#container{
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+.body__blog{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr .05fr;
+    grid-template-areas:
+    "nav"
+    "container"
+    "pie";
+}
+.div__tittle--blog{
+    grid-area: tittle;
+    display: flex;
+    align-items: center;
+}
+.div__article--blog{
+    grid-area: blog;
+}
+.div__aside--blog{
+    grid-area: aside;
+    background-color: beige;
+}
+.div__img--blog{
+    grid-area: img;
+}
+#container .section__blog{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 0.4fr 1fr; 
+    grid-template-areas: 
+    "img img img img  img"
+    "aside tittle tittle tittle tittle"
+    "aside blog blog blog  blog"
+}
+/*========================GRID========================*/
+
+/* BANNER */
+.div__img--blog img{
+    width: 100%;
+}
+/* TITULAR */
+div .div__tittle--blog{
+    height: 20%;
+}
+.div__tittle--blog h1{
+    display: flex;
+    margin: 2% 0 2% 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color:rgb(197, 0, 0);
+}
+/* ASIDE */
+.aside__blog{
+    padding: 5%;
+}
+/* BLOG */
+#blog{
+    display: flex;
+    width: 100%;
+}
+#blog article{
+    width: 20.6rem;
+}
+figcaption{
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-top: .8rem;
+    color: rgb(197, 0, 0) ;
+}
+article img{
+    width: 20.6rem;
+}
+article p{
+    text-align: left;
+    font-size: 1.4rem;
+    padding-top: .8rem;
+}
+.div__article--blog{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.div__button--blog{
+    font-family: 'montserrat', sans-serif ;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 0, 0);
+    margin-top: 1.6rem ;
+    padding: .8rem 1rem .8rem 1rem;
+    border: none;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.div__button--blog:hover{
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* =========================RESPONSIVE - BLOG ========================= */
+@media (max-width: 320px){
+    #container .section__blog{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .04fr .04fr 1fr;
+    grid-template-areas:
+    "img"
+    "tittle"
+    "blog";
+    }
+    .div__aside--blog{
+        display: none;
+    }
+    .div__tittle--blog h1{
+    text-align: center;
+    }
+    .div__article--blog{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        padding: 3.2rem;
+        justify-content: space-evenly;
+    }
+}
+
+/* =========================RESPONSIVE - BLOG ========================= */
+
+
+/* ========================================================= BLOG ========================================================= */
+
+
+/* ========================================================= CONTACTO ========================================================= */
+
+/*========================GRID========================*/
+#container .main__section--form{
+    display: grid;
+    width: 100%;
+}
+.body__form{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: .05fr 1fr .05fr;
+    grid-template-areas:
+    "nav"
+    "container"
+    "pie";
+}
+.div__form{
+    grid-area: form;
+    display: flex;
+    align-items: center;
+}
+.div__map{
+    grid-area: map;
+    width: 100%;
+}
+#container .section__form{
+    display: grid; 
+    grid-template-columns: 1fr .04fr 1fr; 
+    grid-template-rows:repeat(1,1fr) ; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "form form map"
+}
+/*========================GRID========================*/
+
+/* FORM */
+fieldset{
+    border: none;
+}
+.form__container{
+    padding: 5%;
+    align-items: center;
+}
+.section__form{
+    background-color: rgb(248, 248, 248);
+} 
+legend {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color:rgb(197, 0, 0);
+    text-align: center;
+    margin-bottom: .8rem;
+}
+label{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color:rgb(197, 0, 0);
+    margin-top: 1.6rem;
+    margin-bottom: .8rem;
+}
+input[type=text] {
+    width: 100%;
+    padding: 1.2rem .8rem;
+    margin: .8px 0;
+    border: none;
+    border-bottom: .1rem solid red;
+    background: none;
+}
+input[type=text]:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* PLACEHOLDERS */
+input::placeholder {
+    color: rgba(46, 7, 7, 0.460);
+    padding-top: 1.6rem;
+}
+/* SELECT */
+select, option{
+        background-color: none;
+        color: rgba(46, 7, 7, 0.836);
+        padding: 0.8rem 1.6rem 0.8rem 0;
+}
+fieldset h3{
+    padding: 1.6rem 0;
+}
+textarea{
+    border: none;
+    width: 100%;
+}
+textarea::placeholder{
+    padding: 5%;
+}
+/* BUTTONS */
+input[type=reset]{
+    padding: 1.2rem 1.6rem;
+    margin-top: 1.6rem;
+    background-color:rgb(197, 0, 0);
+    border: none;
+    color: white;
+}
+input[type=submit]{
+    padding: 1.2rem 1.6rem;
+    margin-top: 1.6rem;
+    background-color:rgb(197, 0, 0);
+    border: none;
+    color: white;
+}
+
+/* =========================RESPONSIVE - BLOG ========================= */
+@media (max-width: 320px){
+    #container .section__form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .04fr 1fr;
+    grid-template-areas:
+    "map"
+    "form";
+    }
+}
+/* ========================================================= CONTACTO ========================================================= */
