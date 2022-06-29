@@ -1,0 +1,45 @@
+.boton__animado {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: .2rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+}
+.boton__animado:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(197, 0, 0);
+    border-radius: .2rem;
+    z-index: -2;
+}
+.boton__animado:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(110, 3, 3);
+    transition: all 0.3s;
+    border-radius: .2rem;
+    z-index: -1;
+}
+.boton__animado:hover {
+    color: #fff;
+}
+.boton__animado:hover:before {
+    width: 100%;
+}
+
+

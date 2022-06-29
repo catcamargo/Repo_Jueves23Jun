@@ -6,6 +6,7 @@
 		<title>Shira Design: Contáctame</title>
 		<link rel="shortcut icon" href="..\img\favicon-shira-design-03.jpg"/>
 		<link rel="stylesheet" href="..\css\style.css">
+		<link rel="stylesheet" href="..\css\animations.css">
 		<!-- <link rel="stylesheet" href="..\css\form.css"> -->
 	</head>
 	<body class="body__form">
@@ -25,7 +26,7 @@
 		<main id="container" class="main__section--form">
 			<section class="section__form">
 				<div class="div_form">
-					<form class="form__container">
+					<form id="myForm" class="form__container">
 						<fieldset>
 							<legend class="legend__tittle">¿Quiéres trabajar conmigo?</legend>
 							<label for="nombre">Nombre:</label>
@@ -44,8 +45,8 @@
 							</div>
 							<h3>Dime un poco sobre tu proyecto:</h3>
 							<textarea name="mensaje" rows="10" cols="29" placeholder="Mensaje..."></textarea>
-							<input type="reset" value="Limpiar"/>
-							<input type="submit" value="Enviar" onclick="alert('¡Información enviada!')"/>
+							<a href="#" class="boton__animado boton__reset" onclick="document.getElementById('myForm').reset()">Limpiar</a>
+							<a href="#"  class="boton__animado boton__enviar" onclick="alert('¡Información enviada!')">Enviar</a>
 						</fieldset>
 					</form>
 				</div>
